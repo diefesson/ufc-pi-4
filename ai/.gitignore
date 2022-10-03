@@ -1,6 +1,9 @@
 /venv
-/datasets
-/stats
-/models
+/datasets/*
+!datasets/.gitkeep
+/stats/*
+!stats/.gitkeep
+/models/*
+!models/.gitkeep
 /.vscode
 __pycache__
