@@ -17,7 +17,7 @@ venv\Scripts\activate.bat
 
 ~~~
 # BASH (Linux)
-./venv/Scripts/activate
+./venv/bin/activate
 ~~~
 
 Dentro do ambiente, podemos baixar as dependencias do projeto
@@ -32,8 +32,22 @@ E o conjunto de stopwords fornecido pela NLTK
 python nltk_setup.py
 ~~~
 
-Por fim lançamos o Jupyter
+## Editando e executando o processo de treino
+
+Para lançarmos o Jupyter pasta executar
 
 ~~~
 jupyter-notebook
+~~~
+
+Ou se você utiliza VS Code, você pode usar a extensão [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) que oferece várias utilizadades além de integração com as ferramentas Python já existentes para o editor
+
+Todo o processo de treino está organizado no arquivo [train.ipynb](train.ipynb).
+
+## Demonstração de Servidor de Inferência
+
+O aquivo [serve.py](serve.py) contém um exeplo simpels de um servidor de inferência que faz uso dos modelos obtidos durante o processo de treino. Dentro do ambiente venv, você pode executá-lo com
+
+~~~
+python serve.py
 ~~~
