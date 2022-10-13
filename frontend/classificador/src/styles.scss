@@ -1,0 +1,34 @@
+.classifier {
+  .title {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    color: #000;
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  hr {
+    background-color: #000;
+  }
+
+  textArea {
+    background-color: #d9d9d9;
+    width: 80%;
+    max-width: 90%;
+    margin: 30px 50px;
+    height: 20px;
+    max-height: 300px;
+    padding: 10px;
+    border: none;
+  }
+
+  textArea::placeholder {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+  }
+  textArea:focus-visible {
+    outline: none;
+  }
+}
