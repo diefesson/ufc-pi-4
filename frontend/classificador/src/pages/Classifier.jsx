@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonGeneral from "../components/Button/ButtonGeneral";
+import ModalFeedback from "../components/ModalFeedback/ModalFeedback";
 import "../styles.scss";
 
 const Classifier = () => {
@@ -20,6 +21,9 @@ const Classifier = () => {
         <div className="inputs__button">
           <ButtonGeneral text="Analisar" />
         </div>
+      </div>
+      <div className="positionFeedback">
+        <ModalFeedback isApproved />
       </div>
     </div>
   );
