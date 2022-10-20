@@ -1,0 +1,56 @@
+.classifier {
+  .title {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    color: #000;
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  hr {
+    background-color: #000;
+  }
+
+  .inputs {
+    display: flex;
+    gap: 2vw;
+    width: 100vw;
+
+    &__text {
+      padding-top: 30px;
+      padding-left: 30px;
+    }
+
+    textArea {
+      background-color: #d9d9d9;
+      width: 85vw;
+      max-width: 85vw;
+      min-width: 85vw;
+      height: 50px;
+      max-height: 150px;
+      min-height: 20px;
+      padding: 10px;
+      border: none;
+    }
+
+    textArea::placeholder {
+      color: #333;
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+    }
+    textArea:focus-visible {
+      outline: none;
+    }
+
+    &__button {
+      padding-top: 30px;
+    }
+  }
+
+  .positionFeedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
