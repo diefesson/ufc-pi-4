@@ -25,10 +25,10 @@ def infer(comment):
     return not_offensive_prob, offensive_prob, classification
 
 
-def make_error_response(error_code, error_messages):
+def make_error_response(error, error_details):
     return {
-        "error_code": error_code,
-        "error_messages:": error_messages,
+        "error": error,
+        "error_details": error_details,
     }, 400
 
 
