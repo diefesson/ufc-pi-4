@@ -20,7 +20,7 @@ venv\Scripts\activate.bat
 ./venv/bin/activate
 ~~~
 
-Dentro do ambiente, podemos baixar as dependencias do projeto
+Dentro do ambiente, podemos baixar as dependências do projeto
 
 ~~~
 pip install -r requirements.txt
@@ -40,14 +40,32 @@ Para lançarmos o Jupyter pasta executar
 jupyter-notebook
 ~~~
 
-Ou se você utiliza VS Code, você pode usar a extensão [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) que oferece várias utilizadades além de integração com as ferramentas Python já existentes para o editor
+Ou se você utiliza VS Code, você pode usar a extensão [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) que oferece várias utilidades além de integração com as ferramentas Python já existentes para o editor
 
 Todo o processo de treino está organizado no arquivo [train.ipynb](train.ipynb).
 
 ## Demonstração de Servidor de Inferência
 
-O aquivo [serve.py](serve.py) contém um exeplo simpels de um servidor de inferência que faz uso dos modelos obtidos durante o processo de treino. Dentro do ambiente venv, você pode executá-lo com
+O pasta [inferenceserver](infenceserver) contém um pequeno servidor de inferência HTTP. Após o treinamento de modelo, para usa-lo basta executar
 
 ~~~
-python serve.py
+python inferenceserver/main.py
+~~~
+
+O servidor espera o comentário como o parâmetro de URL "comment", abaixo estão alguns exemplos de resposta
+
+~~~
+{
+   "offensive_prob": 0.9,
+   "not_offensive_prob": 0.1,
+   "classification": "OFFENSIVE"
+}
+~~~
+
+~~~
+{
+   "offensive_prob": 0.1,
+   "not_offensive_prob": 0.9,
+   "classification": "NOT_OFFENSIVE"
+}
 ~~~
