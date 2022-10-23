@@ -2,6 +2,7 @@ Flask==2.2.2
 ipykernel==6.16.1
 ipython==8.5.0
 ipywidgets==8.0.1
+marshmallow==3.18.0
 matplotlib==3.5.3
 nltk==3.7
 numpy==1.23.2

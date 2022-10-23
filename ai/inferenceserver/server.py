@@ -42,7 +42,7 @@ def service():
         comment = args["comment"]
     except ValidationError as e:
         return make_error_response("INVALID_REQUEST", e.messages)
-    offensive_prob, not_offensive_prob, classification = infer(comment)
+    not_offensive_prob, offensive_prob, classification = infer(comment)
     return {
         "not_offensive_prob": not_offensive_prob,
         "offensive_prob": offensive_prob,
