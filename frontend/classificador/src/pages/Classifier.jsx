@@ -8,8 +8,8 @@ const Classifier = ({ onClick }) => {
   const [verified, setVerified] = useState();
 
   const handleVerifyText = () => {
-    fetch("api", {
-      comment: text,
+    fetch("http://127.0.0.1:5000/comment-classifier/api/v1.0/analyze", {
+      body: text,
     })
       .then((data) => setVerified(data))
       .catch((err) => console.log(err));
