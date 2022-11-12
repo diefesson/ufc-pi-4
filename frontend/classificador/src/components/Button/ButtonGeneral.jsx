@@ -5,7 +5,7 @@ import "./styles.scss";
 const ButtonGeneral = ({ text, onClick, isLoading }) => {
   return (
     <button onClick={onClick} className="buttonStyle">
-      {!isLoading ? <Loading /> : <>{text}</>}
+      {isLoading ? <Loading /> : <>{text}</>}
     </button>
   );
 };

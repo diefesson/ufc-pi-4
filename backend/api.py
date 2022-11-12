@@ -21,7 +21,7 @@ with open(VECTORIZER_PATH, "br") as vectorizer_file, open(
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
-@app.route('/comment-classifier/api/v1.0/analyze', methods=['GET'])
+@app.route('/comment-classifier/api/v1.0/analyze', methods=['POST'])
 def comment_analyze():
      if not request.json or not 'body' in request.json:
         return abort(400)
