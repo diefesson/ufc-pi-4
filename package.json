@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "prepush": "npm test",
+    "prepush": "npm run test",
     "postinstall": "rm -rf .git/hooks/pre-push && node node_modules/husky/bin/install.js && rm -rf .git/hooks/pre-commit"
   },
   "devDependencies": {
