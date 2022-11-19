@@ -9,16 +9,7 @@ const ModalFeedback = ({ isApproved }) => {
       <div>
         <img src={isApproved ? approved : notApproved} alt="classfier" />
       </div>
-      <div>
-        <div className="textFeedback">
-          Esta frase foi categorizada como{" "}
-          {isApproved ? (
-            <div className="approved">apropriada</div>
-          ) : (
-            <div className="notApproved">inapropriada</div>
-          )}
-        </div>
-      </div>
+      <div>ola</div>
     </div>
   );
 };
