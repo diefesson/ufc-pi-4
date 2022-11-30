@@ -1,14 +1,16 @@
 from flask import Flask, jsonify, abort, make_response, request
 import pickle
+from flask_cors import CORS
 
-VECTORIZER_PATH = "models/tf_idf_vectorizer.pickle"
-MODEL_PATH = "models/tf_idf_svm_model.pickle"
+VECTORIZER_PATH = "../ai/models/tf_idf_vectorizer.pickle"
+MODEL_PATH = "../ai/models/tf_idf_svm_model.pickle"
 
 NOT_OFFENSIVE_LABEL = "NOT_OFFENSIVE"
 OFFENSIVE_LABEL = "OFFENSIVE"
 LIMIT = 0.5
 
 app = Flask(__name__)
+CORS(app)
 
 with open(VECTORIZER_PATH, "br") as vectorizer_file, open(
     MODEL_PATH, "br"
